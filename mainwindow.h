@@ -6,6 +6,7 @@
 #include <QRandomGenerator>
 #include <QScroller>
 #include <QSqlRecord>
+#include <QScrollBar>
 #include "database.h"
 
 namespace Ui {

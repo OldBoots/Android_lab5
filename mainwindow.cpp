@@ -1,7 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QScrollBar>
-
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -95,12 +93,11 @@ void MainWindow::createUI()
     // Устанавливаем размер колонок
 //    ui->tableView->setColumnWidth(0, 40);
     ui->tableView->setColumnWidth(1, 130);
-    ui->tableView->setColumnWidth(2, 70);
+    ui->tableView->setColumnWidth(2, 80);
     ui->tableView->setColumnWidth(3, 40);
     ui->tableView->setColumnWidth(4, 40);
-//    ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableView->horizontalHeader()->setStretchLastSection(true);
-
+    // Реализуем скролл пальцем
     QScroller::grabGesture(ui->tableView->viewport(), QScroller::TouchGesture);
     ui->tableView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
     ui->tableView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
